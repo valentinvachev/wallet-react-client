@@ -1,0 +1,178 @@
+@import '../../constants';
+
+.wallet-page {
+    width: $width-full;
+    min-height: 1000px;
+    margin: auto;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 30px 80px 100px 80px;
+
+    .button {
+        width: 180px;
+        margin-bottom: 37px;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    .wallet-page-transactions-wrapper {
+        margin-bottom: 37px;
+
+        .wallet-page-transactions-inner {
+            overflow-y: scroll;
+            max-height: 225px;
+            width: 550px;
+            background: rgba(86, 172, 224, 0.3);
+            border-radius: 5px;
+
+            /* Firefox */
+            scrollbar-face-color: #56ace0; /* Firefox 63 compatibility */
+            scrollbar-track-color: transparent; /* Firefox 63 compatibility */
+            scrollbar-color: #56ace0 transparent;
+            scrollbar-width: thin;
+
+            /* Scrollbar */
+            &::-webkit-scrollbar {
+                width: 10px;
+                cursor: pointer;
+            }
+
+            &::-webkit-scrollbar-track {
+                opacity: 0;
+                cursor: pointer;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #56ace0;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            -ms-overflow-style: none;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        span {
+            font: $body-XL;
+            color: #56ace0;
+            margin-right: 20px;
+            display: inline-block;
+        }
+
+        .wallet-page-transaction-amount {
+            width: 90px;
+            color: rgb(53, 201, 53);
+        }
+
+        .wallet-page-transaction-name {
+            min-width: 150px;
+        }
+
+        .wallet-page-transaction-amount-red {
+            color: red;
+        }
+    }
+
+    .wallet-balance {
+        display: inline-block;
+        &.positive-amount {
+            color: green;
+            font: normal normal bold 34px/32px 'Open Sans';
+        }
+        &.negative-amount {
+            color: red;
+            font: normal normal bold 34px/32px 'Open Sans';
+        }
+    }
+
+    .submit-report-wrapper {
+        .button {
+            margin-top: 37px;
+        }
+    }
+
+    span,
+    a,
+    label,
+    input,
+    p {
+        font: $body-XL;
+        color: #56ace0;
+    }
+
+    .wallet-page-report-generator {
+        width: 400px;
+
+        label {
+            width: 100%;
+            display: inline-block;
+        }
+
+        .react-calendar {
+            border: 3px solid #56ace0;
+            border-radius: 8px;
+            width: 100%;
+        }
+    }
+
+    .wallet-balance-report-total span {
+        margin-left: 5px;
+        font-size: 24px;
+
+        &.negative-amount,
+        &.positive-amount {
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width: $breakpoint-very-large) {
+        width: $width-very-large;
+        min-height: 500px;
+
+        h1 {
+            font: $body-XL;
+        }
+
+        h2 {
+            font: $body-M;
+        }
+
+        span,
+        a,
+        label,
+        input,
+        p {
+            font: $body-M;
+        }
+
+        .wallet-page-transactions-wrapper {
+            span {
+                font: $body-M;
+            }
+        }
+
+        .wallet-balance {
+            &.positive-amount {
+                font: normal normal bold 24px/26px 'Open Sans';
+            }
+            &.negative-amount {
+                font: normal normal bold 24px/26px 'Open Sans';
+            }
+        }
+    }
+
+  
+    @media (max-width: $breakpoint-medium) {
+        width: $width-medium;
+        padding: 10px 40px 0px 40px;
+
+        .wallet-page-transactions-wrapper .wallet-page-transactions-inner {
+            width: 100%;
+            max-width: unset;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+@import '../../../constants';
+
+
+.wallets-page-active-wallet {
+    width: 700px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+
+    span,
+    a,
+    label,
+    input {
+        font: $body-XL;
+        color: #56ace0;
+    }
+
+    .wallets-page-wallet-icon {
+        width: 35px;
+    }
+
+    .wallet-line-wallet-balance {
+        display: inline-block;
+        min-width: 80px;
+        margin-right: 20px;
+        &.positive-amount {
+            color: green;
+            font: $body-bold-XL;
+        }
+        &.negative-amount {
+            color: red;
+            font: $body-bold-XL;
+        }
+    }
+
+    .wallets-page-wallet-name {
+        min-width: 160px;
+
+        margin-right: 20px;
+    }
+
+    .wallets-page-remove-wallet,
+    .wallets-page-edit-wallet {
+        height: 35px;
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: rgba(255, 0, 0, 0.5);
+        cursor: pointer;
+        margin-right: 35px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    .wallets-page-edit-wallet {
+        background: rgba(45, 92, 245, 0.5);
+        margin-right: 10px;
+        margin-left: 1px;
+    }
+
+    .wallets-page-wallet-icon {
+        margin-right: 35px;
+    }
+
+    @media (max-width: $breakpoint-very-large) {
+        width: 100%;
+
+        span,
+        a,
+        label,
+        input {
+            font: $body-M;
+        }
+
+        .wallet-line-wallet-balance {
+            &.positive-amount {
+                font: $body-bold-M;
+            }
+            &.negative-amount {
+                font: $body-bold-M;
+            }
+        }
+    }
+}

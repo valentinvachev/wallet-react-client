@@ -1,0 +1,110 @@
+@import '../../constants';
+
+.transactions-page {
+    width: $width-full;
+    min-height: 1000px;
+    margin: auto;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 30px 80px 30px 80px;
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    .transactions-page-last {
+        margin-bottom: 150px;
+    }
+
+    label,
+    input,
+    p {
+        font: $body-XL;
+        color: #56ace0;
+        width: 100%;
+    }
+
+    input {
+        border: 3px solid #56ace0;
+        border-radius: 8px;
+        outline: none;
+        height: 40px;
+        padding: 0px 10px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type='number'] {
+        -moz-appearance: textfield;
+    }
+
+    .transaction-page-last-transaction {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        span {
+            font: $body-XL;
+            color: #56ace0;
+            margin-right: 20px;
+            display: inline-block;
+        }
+
+        .last-transaction-amount {
+            width: 110px;
+            color: rgb(53, 201, 53);
+        }
+        .last-transaction-name {
+            width: 150px;
+        }
+
+        .last-transaction-amount-red {
+            color: red;
+        }
+    }
+
+    .transaction-page-new {
+        width: 400px;
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: $breakpoint-very-large) {
+        width: $width-very-large;
+        min-height: 500px;
+        padding-bottom: 50px;
+
+        h1 {
+            font: $body-XL;
+        }
+
+        h2 {
+            font: $body-M;
+        }
+
+        span,
+        a,
+        label,
+        input {
+            font: $body-M;
+        }
+
+        .transaction-page-last-transaction span {
+            font: $body-M;
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        width: $width-medium;
+        padding: 10px 40px 30px 40px;
+
+        .transaction-page-new {
+            width: 100%;
+        }
+    }
+}

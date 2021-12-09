@@ -1,0 +1,147 @@
+@import '../../constants';
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 160px;
+    background-color: white;
+    box-shadow: 0px 3px 10px #00000029;
+    gap: 150px;
+    width: $width-full;
+    padding-left: 80px;
+    margin: auto;
+
+    .header-profile-logout {
+        display: none;
+
+        &.header-profile-logout-hidden {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 120px;
+            height: auto;
+            padding: 5px;
+            top: 31px;
+            border: 1px solid #56ace0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            background: white;
+            user-select: none;
+
+            p {
+                width: 100%;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    .header-triangle {
+        width: 12px;
+        height: 12px;
+        margin-right: 10px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .header-profile-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    p,
+    a,
+    span {
+        font: $body-XL;
+        color: #56ace0;
+        cursor: pointer;
+    }
+
+    a {
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    .header-logo {
+        width: 100px;
+        cursor: pointer;
+    }
+
+    .header-link-wrapper {
+        display: flex;
+        gap: 40px;
+
+        span {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-very-large) {
+        width: $width-very-large;
+        gap: 70px;
+
+        p,
+        a,
+        span {
+            font: $body-M;
+        }
+
+        .header-logo {
+            width: 60px;
+        }
+
+        .header-link-wrapper {
+            gap: 0px;
+            flex-wrap: wrap;
+            margin-left: 100px;
+
+            a,
+            span {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        width: $width-medium;
+        padding-left: 40px;
+        gap: 7vw;
+
+        .header-logo {
+            width: 50px;
+        }
+
+        .header-link-wrapper {
+            gap: 0px;
+            flex-wrap: wrap;
+            margin-left: 0px;
+
+            a,
+            span {
+                width: 50%;
+            }
+        }
+    }
+
+    @media (max-width: 540px) {
+        .header-link-wrapper {
+            gap: 0px;
+            flex-wrap: wrap;
+            margin-left: 0px;
+
+            a,
+            span {
+                width: 100%;
+            }
+        }
+    }
+}

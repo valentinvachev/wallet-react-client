@@ -1,0 +1,182 @@
+@import '../../constants';
+
+.home-page {
+    width: $width-full;
+    min-height: 1000px;
+    margin: auto;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 30px 80px 0px 80px;
+
+    h1 {
+        margin-bottom: 37px;
+    }
+
+    .home-page-wallet-wrapper {
+        margin-bottom: 80px;
+    }
+
+    .home-page-categories-wrapper {
+        span {
+            display: inline-block;
+        }
+
+        .home-page-categories-expense-wrapper {
+            margin-bottom: 15px;
+        }
+
+        .expense-line-name {
+            min-width: 160px;
+            margin-right: 20px;
+        }
+
+        .income-line-amount {
+            color: green;
+            font: $body-bold-XL;
+        }
+
+        .expense-line-amount {
+            color: red;
+            font: $body-bold-XL;
+        }
+    }
+
+    span,
+    a,
+    label,
+    input {
+        font: $body-XL;
+        color: #56ace0;
+    }
+
+    .wallet-balance {
+        display: inline-block;
+        &.positive-amount {
+            color: green;
+            font: $body-bold-XL;
+        }
+        &.negative-amount {
+            color: red;
+            font: $body-bold-XL;
+        }
+    }
+
+    .home-page-not-logged {
+        background: linear-gradient(
+            351deg,
+            rgba(255, 190, 0, 1) 28%,
+            rgba(86, 172, 224, 1) 89%
+        );
+        overflow: hidden;
+        height: 260px;
+        clip-path: polygon(0 0, 100% 0, 100% 41%, 0% 100%);
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+
+        .home-page-not-logged-text {
+            font: normal normal normal 40px/32px 'Open Sans';
+            color: white;
+        }
+    }
+
+    .home-page-not-logged-image {
+        width: 100%;
+        margin: auto;
+        margin-top: -155px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: $breakpoint-very-large) {
+        width: $width-very-large;
+        min-height: 500px;
+
+        .home-page-logged-in {
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            font: $body-XL;
+        }
+
+        h2 {
+            font: $body-M;
+        }
+
+        span,
+        a,
+        label,
+        input {
+            font: $body-M;
+        }
+
+        .wallet-balance.positive-amount {
+            font: $body-bold-M;
+        }
+
+        .home-page-categories-wrapper .income-line-amount {
+            font: $body-bold-M;
+        }
+        .home-page-categories-wrapper .expense-line-amount {
+            font: $body-bold-M;
+        }
+
+        .home-page-not-logged {
+            background: linear-gradient(
+                351deg,
+                rgba(255, 190, 0, 1) 28%,
+                rgba(86, 172, 224, 1) 89%
+            );
+            overflow: hidden;
+            height: 180px;
+            clip-path: polygon(0 0, 100% 0, 100% 25%, 0% 55%);
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+
+            .home-page-not-logged-text {
+                font: normal normal normal 25px/24px 'Open Sans';
+                color: white;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        width: $width-medium;
+        min-height: 500px;
+        padding: 10px;
+
+
+        .home-page-not-logged-image {
+            display: none;
+        }
+
+        .home-page-not-logged {
+            background: linear-gradient(
+                351deg,
+                rgba(255, 190, 0, 1) 28%,
+                rgba(86, 172, 224, 1) 89%
+            );
+            overflow: hidden;
+            height: 180px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            display: flex;
+            justify-content: center;
+            padding: 0px;
+            width: 100%;
+            border-radius: 25px;
+
+            .home-page-not-logged-text {
+                font: normal normal normal 18px/30px 'Open Sans';
+                color: white;
+                text-align: center;
+                padding-top: 50px;
+            }
+        }
+    }
+}

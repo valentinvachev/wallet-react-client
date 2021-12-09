@@ -1,0 +1,209 @@
+@import '../../constants';
+
+.categories-page {
+    width: $width-full;
+    min-height: 1000px;
+    margin: auto;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 30px 80px 30px 80px;
+
+    span,
+    a,
+    label,
+    input {
+        font: $body-XL;
+        color: #56ace0;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    .categories-page-active-categories-wrapper {
+        margin-bottom: 40px;
+    }
+
+    .categories-page-active-categories {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .categories-page-active-categories-sub-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        h2 {
+            width: 100%;
+        }
+    }
+
+    .categories-page-active-categories-income {
+        overflow-y: scroll;
+        max-height: 215px;
+        width: 550px;
+        background: rgba(0, 128, 0, 0.3);
+        border-radius: 5px;
+        margin-bottom: 20px;
+
+        /* Firefox */
+        scrollbar-face-color: #56ace0; /* Firefox 63 compatibility */
+        scrollbar-track-color: transparent; /* Firefox 63 compatibility */
+        scrollbar-color: #56ace0 transparent;
+        scrollbar-width: thin;
+
+        /* Scrollbar */
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            opacity: 0;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #56ace0;
+            border-radius: 5px;
+        }
+
+        -ms-overflow-style: none;
+    }
+
+    .categories-page-active-categories-expense {
+        overflow-y: scroll;
+        max-height: 215px;
+        width: 550px;
+        background: rgba(255, 0, 0, 0.3);
+        border-radius: 5px;
+
+        /* Firefox */
+        scrollbar-face-color: #56ace0; /* Firefox 63 compatibility */
+        scrollbar-track-color: transparent; /* Firefox 63 compatibility */
+        scrollbar-color: #56ace0 transparent;
+        scrollbar-width: thin;
+
+        /* Scrollbar */
+        &::-webkit-scrollbar {
+            width: 10px;
+            cursor: pointer;
+        }
+
+        &::-webkit-scrollbar-track {
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #56ace0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        -ms-overflow-style: none;
+    }
+
+    .categories-active {
+        display: flex;
+        align-items: center;
+        height: 43px;
+    }
+
+    .categories-active-edit-category-wrapper button {
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+
+    .categories-active-remove-category,
+    .categories-active-edit-category {
+        height: 35px;
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: rgba(255, 0, 0, 0.5);
+        cursor: pointer;
+        margin-right: 35px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    .categories-active-edit-category {
+        background: rgba(45, 92, 245, 0.5);
+        margin-right: 10px;
+        margin-left: 1px;
+    }
+
+    .categories-active-edit-category-wrapper {
+        input {
+            margin-bottom: 0px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+    }
+
+    .categories-page-new-category,
+    .categories-active-edit-category-wrapper {
+        width: 400px;
+        margin-bottom: 40px;
+
+        input {
+            border: 3px solid #56ace0;
+            border-radius: 8px;
+            outline: none;
+            height: 40px;
+            padding: 0px 10px;
+            width: 100%;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type='number'] {
+            -moz-appearance: textfield;
+        }
+    }
+
+    @media (max-width: $breakpoint-very-large) {
+        width: $width-very-large;
+        min-height: 500px;
+        padding-bottom: 50px;
+
+        h1 {
+            font: $body-XL;
+        }
+
+        h2 {
+            font: $body-M;
+        }
+
+        span,
+        a,
+        label,
+        input {
+            font: $body-M;
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        width: $width-medium;
+        padding: 10px 40px 30px 40px;
+
+        .categories-page-new-category,
+        .categories-active-edit-category-wrapper {
+            width: 100%;
+        }
+    }
+}

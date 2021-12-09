@@ -1,0 +1,117 @@
+@import '../../constants';
+
+.login-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    z-index: 2;
+
+    input,
+    h4,
+    label {
+        font: $input-XL;
+        color: #56ace0;
+        width: 100%;
+    }
+
+    label,
+    h4 {
+        color: black;
+    }
+
+    h4 {
+        margin-bottom: 50px;
+        font: $body-XL;
+    }
+
+    .button {
+        margin: 20px 0px;
+    }
+
+    input {
+        border: 3px solid #56ace0;
+        border-radius: 8px;
+        outline: none;
+        height: 40px;
+        padding: 0px 10px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .login-modal-content {
+        width: 455px;
+        padding: 14px 80px;
+        background: #ffc10d;
+        border-radius: 10px;
+    }
+
+    .login-modal-close-button {
+        position: relative;
+        top: -47px;
+        left: 320px;
+        p {
+            color: #ffffff;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    @-webkit-keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0;
+        }
+        to {
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+    @keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0;
+        }
+        to {
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: $breakpoint-very-large) {
+        input,
+        h4,
+        label {
+            font: $input-M;
+        }
+
+        h4 {
+            font: $body-M;
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        .login-modal-close-button {
+            right: auto;
+            left: auto;
+            text-align: center;
+        }
+    }
+}

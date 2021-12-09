@@ -1,0 +1,54 @@
+@import './constants';
+
+*,
+*:before,
+*:after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0px;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    background: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.input-field,
+.dropdown-wrapper,
+.react-calendar {
+    margin-bottom: 15px;
+
+    @media (max-width: $breakpoint-very-large) {
+        margin-bottom: 35px;
+     }
+}
+
+input.input-error-filled {
+    border: 3px solid red !important;
+    color: red !important;
+    margin-bottom: 0px !important;
+}
+
+.input-error-text {
+    height: 0px;
+
+    &.input-error-text-filled {
+        font: normal normal normal 14px/16px 'Open Sans';
+        color: red;
+        height: 15px;
+        margin-left: 2px;
+
+        @media (max-width: $breakpoint-very-large) {
+           height: 35px;
+        }
+    }
+}

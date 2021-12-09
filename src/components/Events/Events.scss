@@ -1,0 +1,88 @@
+@import '../../constants';
+
+.events-page {
+    width: $width-full;
+    min-height: 1000px;
+    margin: auto;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 30px 80px 0px 80px;
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    .events-page-active-events-wrapper {
+        margin-bottom: 180px;
+        span {
+            font: $body-XL;
+            color: #56ace0;
+            margin-right: 20px;
+            display: inline-block;
+        }
+
+        .events-page-event-name {
+            margin-left: 20px;
+        }
+    }
+
+    .events-page-new-event-wrapper {
+        width: 400px;
+
+        .button {
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .react-calendar {
+            border: 3px solid #56ace0;
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        label,
+        input {
+            font: $body-XL;
+            color: #56ace0;
+            width: 100%;
+        }
+
+        input {
+            border: 3px solid #56ace0;
+            border-radius: 8px;
+            outline: none;
+            height: 40px;
+            padding: 0px 10px;
+        }
+    }
+
+    @media (max-width: $breakpoint-very-large) {
+        width: $width-very-large;
+        min-height: 500px;
+
+        h1 {
+            font: $body-XL;
+        }
+
+        h2 {
+            font: $body-M;
+        }
+
+        .events-page-active-events-wrapper span {
+            font: $body-M;
+        }
+
+        .events-page-new-event-wrapper label,
+        .events-page-new-event-wrapper input {
+            font: $body-M;
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        width: $width-medium;
+        padding: 10px 40px 0px 40px;
+
+        .events-page-new-event-wrapper {
+            width: 100%;
+        }
+    }
+}

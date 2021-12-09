@@ -1,0 +1,87 @@
+@import '../../constants';
+
+.admin-page {
+    width: 1350px;
+    min-height: 1000px;
+    margin: auto;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 30px 80px 30px 80px;
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .admin-role-line {
+        width: 100%;
+        min-height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+
+        &.admin-role-header {
+            border-top: 1px solid black;
+        }
+
+        .admin-role-line-span {
+            width: 33%;
+            padding: 0px 10px;
+            height: 100%;
+            border-right: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font: $body-XL;
+            word-break: break-all;
+
+            &.admin-role-line-user {
+                word-break: break-word;
+            }
+        }
+
+        .admin-role-line-span-header {
+            font: $body-XL;
+            font-weight: 700;
+        }
+
+        button {
+            width: 260px;
+            height: auto;
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: $breakpoint-very-large) {
+        width: $width-very-large;
+        min-height: 500px;
+        padding: 10px 40px 0px 40px;
+
+        h1 {
+            font: $body-XL;
+        }
+
+        h2 {
+            font: $body-M;
+        }
+
+        .admin-role-line {
+            .admin-role-line-span-header,
+            .admin-role-line-span {
+                font: $body-M;
+            }
+        }
+
+        .admin-role-line button {
+            width: 90%;
+            word-break: keep-all;
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        width: $width-medium;
+    }
+}

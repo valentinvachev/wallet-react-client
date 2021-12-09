@@ -1,0 +1,42 @@
+@import '../../constants';
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 160px;
+    background-color: white;
+    box-shadow: 0px 0px 10px #00000029;
+    gap: 150px;
+    width: $width-full;
+    padding-left: 80px;
+    margin: auto;
+
+    p {
+        font: $body-XL;
+        color: #56ace0;
+    }
+
+    @media (max-width: $breakpoint-very-large) {
+        width: $width-very-large;
+
+        p,
+        a,
+        span {
+            font: $body-M;
+        }
+
+        .header-logo {
+            width: 60px;
+        } 
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        width: $width-medium;
+        padding-left: 40px;
+        gap: 70px;
+
+        .header-logo {
+            width: 50px;
+        } 
+    }
+}
