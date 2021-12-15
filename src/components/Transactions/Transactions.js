@@ -124,8 +124,8 @@ const Transactions = () => {
                             wallet: transactionWallet,
                             amount:
                                 transactionCategoryParent === 'EXPENSE'
-                                    ? transactionAmount * -1
-                                    : transactionAmount,
+                                    ? Number(transactionAmount) * -1
+                                    : Number(transactionAmount),
                             name: transactionName,
                         },
                         ...appState.lastFiveTransactions.slice(0, 4),

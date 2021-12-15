@@ -39,6 +39,12 @@ const Events = () => {
     const handleNewEvents = async () => {
         let eventValid = true;
 
+        const dateStart = value;
+        dateStart.setHours( dateStart.getHours() + 2 );
+
+        const dateEnd = valueEnd;
+        dateEnd.setHours( dateEnd.getHours() + 2 );
+
         if (inputEventName.trim().length < 2) {
             setInputEventNameError('Invalid event name. Name should be at least 2 symbols.');
             eventValid = false;
@@ -54,8 +60,8 @@ const Events = () => {
             try {
                 data = await requester('POST', `${server}/api/events`, {
                     name: inputEventName,
-                    startDate: value,
-                    endDate: valueEnd,
+                    startDate: dateStart,
+                    endDate: dateEnd,
                 });
 
                 if (data && data.created) {
@@ -65,8 +71,8 @@ const Events = () => {
                             {
                                 id: data.created,
                                 name: inputEventName,
-                                startDate: value.toISOString().split('T')[0],
-                                endDate: valueEnd.toISOString().split('T')[0],
+                                startDate: dateStart.toISOString().split('T')[0],
+                                endDate: dateEnd.toISOString().split('T')[0],
                             },
                         ],
                     });
